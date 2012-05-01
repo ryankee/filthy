@@ -22,6 +22,7 @@ http.createServer (req, res)->
       catch error
         res.end help
     req.on 'end', ()->
+      console.log @data if @data
       if @data and @data.content
         res.end Filter.isClean(@data.content)
       else if @data and @data['']
