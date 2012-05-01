@@ -6,3 +6,9 @@ A response of `true` means you're all clean, `false` means you've got a potty mo
 ## Example
     curl -d "this is a really dirty string" filthy.herokuapp.com
     => true
+    curl -d "{'content':'this is a super dirty string'}" filthy.herokuapp.com
+    => true
+    curl -d "content=this is the dirtiest of strings" filthy.herokuapp.com
+    => true
+
+
