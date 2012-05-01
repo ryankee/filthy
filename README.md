@@ -5,4 +5,4 @@ A response of `true` means you're all clean, `false` means you've got a potty mo
 
 ## Example
     curl -d "this is a really dirty string" filthy.herokuapp.com
-    => false
+    => true
