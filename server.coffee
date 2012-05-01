@@ -14,6 +14,6 @@ http.createServer (req, res)->
     res.end """
       Submit a POST with `content` set to the string you want to filter.
 
-      A response of `true` means you're all clean, `false` means you've got a foul mouth.
+      A response of `true` means you're all clean, `false` means you've got a potty mouth.
     """
 .listen(port, '127.0.0.1')
