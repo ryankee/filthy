@@ -22,11 +22,15 @@ http.createServer (req, res)->
       catch error
         res.end help
     req.on 'end', ()->
-      console.log @data if @data
       if @data and @data.content
         res.end Filter.isClean(@data.content)
-      else if @data and @data['']
-        res.end Filter.isClean(@data[''])
+      else if @data
+        for key of @data
+          if key.length > 0
+            res.end Filter.isClean(key)
+          else
+            value = @data[key]
+            res.end Filter.isClean(value)
       else
         res.end help
   else
