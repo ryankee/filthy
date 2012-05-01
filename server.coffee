@@ -4,9 +4,14 @@ Filter = require('./filter').Filter
 port = process.env.PORT || 4567
 
 help = """
-  Submit a POST with `content` set to the string you want to filter.
+  Submit a POST the string you want to filter.
 
   A response of `true` means you're all clean, `false` means you've got a potty mouth.
+
+  Examples:
+  curl -d "this is a really dirty string" filthy.herokuapp.com
+  curl -d "{'content':'this is a super dirty string'}" filthy.herokuapp.com
+  curl -d "content=this is the dirtiest of strings" filthy.herokuapp.com
 """
 
 http.createServer (req, res)->
