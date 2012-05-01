@@ -4,7 +4,7 @@ Filter = require('./filter').Filter
 port = process.env.PORT || 4567
 
 help = """
-  Submit a POST the string you want to filter.
+  Submit a POST with the string you want to filter.
 
   A response of `true` means you're all clean, `false` means you've got a potty mouth.
 
