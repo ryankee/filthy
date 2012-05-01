@@ -24,8 +24,8 @@ http.createServer (req, res)->
     req.on 'end', ()->
       if @data and @data.content
         res.end Filter.isClean(@data.content)
-      else if @data
-        res.end Filter.isClean(@data)
+      else if @data and @data['']
+        res.end Filter.isClean(@data[''])
       else
         res.end help
   else
