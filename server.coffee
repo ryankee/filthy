@@ -1,4 +1,5 @@
 http = require 'http'
+querystring = require 'querystring' 
 Filter = require('./filter').Filter
 port = process.env.PORT || 4567
 
@@ -13,7 +14,13 @@ http.createServer (req, res)->
   res.writeHead 200, {'Content-Type': 'text/plain'}
   if req.method is 'POST'
     req.on 'data', (data)->
-      @data = JSON.parse data
+      try
+        if req.headers['content-type'].indexOf('application/json') > -1
+          @data = JSON.parse data
+        else
+          @data = querystring.parse(data)
+      catch error
+        res.end help
     req.on 'end', ()->
       if @data and @data.content
         res.end Filter.isClean(@data.content)
