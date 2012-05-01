@@ -1,5 +1,5 @@
 http = require 'http'
-querystring = require 'querystring' 
+querystring = require 'querystring'
 Filter = require('./filter').Filter
 port = process.env.PORT || 4567
 
