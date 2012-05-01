@@ -16,4 +16,4 @@ http.createServer (req, res)->
 
       A response of `true` means you're all clean, `false` means you've got a potty mouth.
     """
-.listen(port, '127.0.0.1')
+.listen(port, '0.0.0.0')
