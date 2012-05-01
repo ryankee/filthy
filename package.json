@@ -1,0 +1,12 @@
+{
+  "author": "Ryan Kee <me@ryankee.com>",
+  "name": "filthy",
+  "description": "A simple service to check if a string contains foul language.",
+  "version": "0.0.1",
+  "engines": {
+    "node": "~>0.6.0"
+  },
+  "dependencies": {
+    "coffee-script": "=1.2.0",
+  }
+}
