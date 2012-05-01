@@ -7,6 +7,6 @@
     "node": "~>0.6.0"
   },
   "dependencies": {
-    "coffee-script": "=1.2.0",
+    "coffee-script": "=1.2.0"
   }
 }
