@@ -11,5 +11,9 @@ http.createServer (req, res)->
     req.on 'end', ()->
       res.end Filter.isClean(@data.content)
   else
-    res.end 'Submit a POST with `content` set to the string you want to filter.'
+    res.end """
+      Submit a POST with `content` set to the string you want to filter.
+
+      A response of `true` means you're all clean, `false` means you've got a foul mouth.
+    """
 .listen(port, '127.0.0.1')
